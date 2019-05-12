@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content">
+
+
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="130dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/bg_white_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingLeft="60dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp"
+            android:id="@id/productContainerCL"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginEnd="35dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleTV"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:text="TITLE"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/descriptionTV"
+                android:textColor="@color/text_color_light"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac sapien eget dolor cursus aliquam."
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleTV"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout3"/>
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:id="@+id/linearLayout3"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/caloriTV"
+                    android:textColor="@color/text_color_light"
+                    android:textStyle="normal"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="300 cal"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/priceTV"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:text="300 ₺"/>
+
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout"
+            android:background="@drawable/bg_white_radius"
+            app:layout_constraintTop_toTopOf="parent"
+            android:elevation="4dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent">
+        <ImageView
+                android:id="@+id/productImageIV"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/connection_error"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout android:layout_width="40dp"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_marginRight="15dp"
+                  android:elevation="4dp"
+                  android:background="@drawable/bg_white_radius"
+                  android:layout_marginEnd="15dp"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintBottom_toBottomOf="@+id/productContainerCL"
+                  app:layout_constraintTop_toTopOf="@+id/productContainerCL">
+
+
+        <TextView
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:text="+"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:id="@+id/increaseTV"/>
+
+        <TextView
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:text="0"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="@color/bg_amount"
+                android:id="@+id/amountTV"/>
+
+        <TextView
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:text="-"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:id="@+id/decreaseTV"/>
+
+
+    </LinearLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

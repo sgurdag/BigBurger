@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/llNoConnection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="50dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/connection_error" />
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:layout_marginTop="30dp"
+                  android:text="@string/text_connection_error"/>
+
+        <Button
+                android:id="@+id/btnTryAgain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/bg_accent_radius"
+                android:text="@string/btn_try_again" />
+
+    </LinearLayout>
+
+</merge>
