@@ -10,6 +10,9 @@ import com.smartover.bigburger.data.mvp.view.BaseView
 import com.smartover.bigburger.ui.activity.MainActivity
 import com.smartover.bigburger.utility.NetWorkConection
 
+/**
+ * A base fragment where we manage the functions which are common in all fragment.
+ */
 abstract class BaseFragment : Fragment(), BaseView {
 
 
@@ -40,7 +43,6 @@ abstract class BaseFragment : Fragment(), BaseView {
     override fun dismissProgresss() {
         MainActivity.instance?.removeFragment(ProgressFragment.TAG)
     }
-
 
     abstract fun showMessage(message: String)
     abstract fun getViewLayout(): Int

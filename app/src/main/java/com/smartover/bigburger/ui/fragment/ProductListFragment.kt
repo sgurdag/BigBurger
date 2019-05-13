@@ -18,6 +18,9 @@ import kotlinx.android.synthetic.main.fragment_product_list.*
 import kotlinx.android.synthetic.main.view_no_connection.*
 
 
+/**
+ * This class is where we fetch product list and show user
+ */
 class ProductListFragment : BaseFragment(), ProductListViewPresenter.View {
 
     companion object { val TAG: String = "ProductListFragment" }
